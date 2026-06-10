@@ -14,22 +14,22 @@ function startGame() {
 
 stars.forEach((star) => {
   star.addEventListener("click", () => {
-    star.classList.add("collected");
-    collected++;
+    if (!star.classList.contains("collected")) {
+      star.classList.add("collected");
+      collected++;
 
-    score.textContent = `Collected: ${collected} / ${totalStars}`;
+      score.textContent = "Collected: " + collected + " / " + totalStars;
 
-    if (collected === totalStars) {
-      message.textContent = "Gallery unlocked!";
-      gallery.classList.remove("locked");
+      if (collected === totalStars) {
+        message.textContent = "Gallery unlocked!";
+        gallery.classList.remove("locked");
 
-      setTimeout(() => {
-        gallery.scrollIntoView({
-          behavior: "smooth"
-        });
-      }, 700);
+        setTimeout(() => {
+          gallery.scrollIntoView({
+            behavior: "smooth"
+          });
+        }, 700);
+      }
     }
   });
-});
-});
 });
