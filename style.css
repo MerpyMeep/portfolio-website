@@ -245,12 +245,13 @@ gap: 30px;
 }
 
 .wide-card {
-grid-column: span 3;
+  grid-column: span 3;
 }
 
 .wide-card img {
-height: 400px;
-object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
 }
 
 @media (max-width: 900px) {
