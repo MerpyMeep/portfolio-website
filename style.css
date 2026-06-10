@@ -339,3 +339,20 @@ height: 250px;
 display: none;
 }
 
+.star {
+  position: absolute;
+  z-index: 20;
+  pointer-events: auto;
+  margin: 0;
+  padding: 10px;
+  width: 55px;
+  height: 55px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.game-area {
+  position: relative;
+  z-index: 1;
+}
+
