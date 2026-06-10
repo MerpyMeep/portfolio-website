@@ -1,34 +1,34 @@
 let collected = 0;
 const totalStars = 5;
 
-const stars = document.querySelectorAll(".star");
-const score = document.getElementById("score");
-const message = document.getElementById("unlock-message");
-const gallery = document.getElementById("gallery");
-
 function startGame() {
   document.getElementById("game").scrollIntoView({
     behavior: "smooth"
   });
 }
 
-stars.forEach((star) => {
-  star.addEventListener("click", () => {
+const stars = document.querySelectorAll(".star");
+
+stars.forEach(function (star) {
+  star.addEventListener("click", function () {
     if (!star.classList.contains("collected")) {
       star.classList.add("collected");
       collected++;
 
-      score.textContent = "Collected: " + collected + " / " + totalStars;
+      document.getElementById("score").textContent =
+        "Collected: " + collected + " / " + totalStars;
 
       if (collected === totalStars) {
-        message.textContent = "Gallery unlocked!";
-        gallery.classList.remove("locked");
+        document.getElementById("unlock-message").textContent =
+          "Gallery unlocked!";
 
-        setTimeout(() => {
-          gallery.scrollIntoView({
+        document.getElementById("gallery").classList.remove("locked");
+
+        setTimeout(function () {
+          document.getElementById("gallery").scrollIntoView({
             behavior: "smooth"
           });
-        }, 700);
+        }, 800);
       }
     }
   });
