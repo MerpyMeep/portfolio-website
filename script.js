@@ -1,5 +1,4 @@
 let collected = 0;
-const totalStars = 5;
 
 function startGame() {
   document.getElementById("game").scrollIntoView({
@@ -7,29 +6,21 @@ function startGame() {
   });
 }
 
-const stars = document.querySelectorAll(".star");
+function collectStar(star) {
+  if (star.classList.contains("collected")) {
+    return;
+  }
 
-stars.forEach(function (star) {
-  star.addEventListener("click", function () {
-    if (!star.classList.contains("collected")) {
-      star.classList.add("collected");
-      collected++;
+  star.classList.add("collected");
+  collected++;
 
-      document.getElementById("score").textContent =
-        "Collected: " + collected + " / " + totalStars;
+  document.getElementById("score").textContent =
+    "Collected: " + collected + " / 5";
 
-      if (collected === totalStars) {
-        document.getElementById("unlock-message").textContent =
-          "Gallery unlocked!";
+  if (collected === 5) {
+    document.getElementById("unlock-message").textContent =
+      "Gallery unlocked!";
 
-        document.getElementById("gallery").classList.remove("locked");
-
-        setTimeout(function () {
-          document.getElementById("gallery").scrollIntoView({
-            behavior: "smooth"
-          });
-        }, 800);
-      }
-    }
-  });
-});
+    document.getElementById("gallery").classList.remove("locked");
+  }
+}
