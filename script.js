@@ -7,33 +7,29 @@ const message = document.getElementById("unlock-message");
 const gallery = document.getElementById("gallery");
 
 function startGame() {
-document.getElementById("game").scrollIntoView({
-behavior: "smooth"
-});
+  document.getElementById("game").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 stars.forEach((star) => {
-star.addEventListener("click", () => {
-if (!star.classList.contains("collected")) {
-star.classList.add("collected");
-collected++;
+  star.addEventListener("click", () => {
+    star.classList.add("collected");
+    collected++;
 
-```
-  score.textContent = `Collected: ${collected} / ${totalStars}`;
+    score.textContent = `Collected: ${collected} / ${totalStars}`;
 
-  if (collected === totalStars) {
-    message.textContent = "Gallery unlocked!";
+    if (collected === totalStars) {
+      message.textContent = "Gallery unlocked!";
+      gallery.classList.remove("locked");
 
-    gallery.classList.remove("locked");
-
-    setTimeout(() => {
-      gallery.scrollIntoView({
-        behavior: "smooth"
-      });
-    }, 800);
-  }
-}
-```
-
+      setTimeout(() => {
+        gallery.scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 700);
+    }
+  });
+});
 });
 });
