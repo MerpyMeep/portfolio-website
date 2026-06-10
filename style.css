@@ -287,7 +287,7 @@ border: 1px solid #6f74c9;
 transition: .3s;
 }
 
-.card:hover {
+.card: hover {
 transform: translateY(-8px);
 
 box-shadow:
@@ -295,15 +295,27 @@ box-shadow:
 }
 
 .card img {
-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
 
-height: 320px;
+.card {
+  background: linear-gradient(
+    180deg,
+    #1a2045,
+    #17142f
+  );
 
-object-fit: cover;
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid #6f74c9;
 
-border-radius: 16px;
+  transition: .3s;
 
-margin-bottom: 15px;
+  height: fit-content;
 }
 
 .card h3 {
