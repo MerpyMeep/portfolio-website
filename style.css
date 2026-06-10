@@ -121,7 +121,7 @@ font-size: 1rem;
 transition: .3s;
 }
 
-button:hover {
+button: hover {
 transform: translateY(-3px);
 }
 
@@ -198,20 +198,32 @@ radial-gradient(circle,#26315f,#0d1228);
 }
 
 .star {
-position: absolute;
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-background: none;
-border: none;
+  width: 60px;
+  height: 60px;
 
-font-size: 2.5rem;
+  font-size: 2.8rem;
+  color: gold;
+  text-shadow: 0 0 20px gold;
 
-color: gold;
+  cursor: pointer;
+  user-select: none;
 
-text-shadow: 0 0 20px gold;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.star: hover {
+  transform: scale(1.25);
 }
 
 .star.collected {
-visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 #score {
