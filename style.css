@@ -1,1 +1,140 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #0c1020;
+  color: #f5edff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+  color: #f5edff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #cba6ff;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(12, 16, 32, 0.5), rgba(12, 16, 32, 0.9)),
+    url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 180px 20px;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #8e63ff;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #b18cff;
+}
+
+section {
+  padding: 70px 10%;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #d9c2ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-section {
+  background: #151936;
+  text-align: center;
+}
+
+.game-area {
+  position: relative;
+  height: 350px;
+  border: 2px solid #8e63ff;
+  border-radius: 20px;
+  background: radial-gradient(circle, #28305e, #0c1020);
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  background: transparent;
+  color: #ffdb70;
+  padding: 0;
+  text-shadow: 0 0 15px #ffdb70;
+}
+
+.flower.collected {
+  visibility: hidden;
+}
+
+#unlock-message {
+  color: #ffdb70;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #171c38;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #3d477a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(203, 166, 255, 0.4);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #080b16;
+}
