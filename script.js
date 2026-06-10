@@ -1,27 +1,39 @@
 let collected = 0;
-const totalFlowers = 5;
+const totalStars = 5;
 
-function startGame() {
-  document.getElementById("game").classList.remove("hidden");
-  document.getElementById("game").scrollIntoView({ behavior: "smooth" });
-}
-
-const flowers = document.querySelectorAll(".flower");
+const stars = document.querySelectorAll(".star");
 const score = document.getElementById("score");
 const message = document.getElementById("unlock-message");
+const gallery = document.getElementById("gallery");
 
-flowers.forEach((flower) => {
-  flower.addEventListener("click", () => {
-    if (!flower.classList.contains("collected")) {
-      flower.classList.add("collected");
-      collected++;
+function startGame() {
+document.getElementById("game").scrollIntoView({
+behavior: "smooth"
+});
+}
 
-      score.textContent = `Collected: ${collected} / ${totalFlowers}`;
+stars.forEach((star) => {
+star.addEventListener("click", () => {
+if (!star.classList.contains("collected")) {
+star.classList.add("collected");
+collected++;
 
-      if (collected === totalFlowers) {
-        message.textContent = "You unlocked the full portfolio gallery!";
-        document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
+```
+  score.textContent = `Collected: ${collected} / ${totalStars}`;
+
+  if (collected === totalStars) {
+    message.textContent = "Gallery unlocked!";
+
+    gallery.classList.remove("locked");
+
+    setTimeout(() => {
+      gallery.scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 800);
+  }
+}
+```
+
+});
 });
