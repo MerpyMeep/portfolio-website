@@ -240,6 +240,28 @@ margin-top: 20px;
 
 .cards {
 display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+}
+
+.wide-card {
+grid-column: span 3;
+}
+
+.wide-card img {
+height: 400px;
+object-fit: cover;
+}
+
+@media (max-width: 900px) {
+.cards {
+grid-template-columns: 1fr;
+}
+
+.wide-card {
+grid-column: span 1;
+}
+}
 
 grid-template-columns:
 repeat(auto-fit,minmax(280px,1fr));
