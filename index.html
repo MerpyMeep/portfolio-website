@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tori C Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <h1>Tori C</h1>
+      <div>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
+    <div class="hero-text">
+      <h2>Interactive Artist Portfolio</h2>
+      <p>Explore my work through digital illustration, game design, and world-building.</p>
+      <button onclick="startGame()">Enter Portfolio</button>
+    </div>
+  </header>
+
+  <section id="game" class="game-section hidden">
+    <h2>Collect the glowing flowers</h2>
+    <p>Click all 5 flowers to unlock featured portfolio pieces.</p>
+    <p id="score">Collected: 0 / 5</p>
+
+    <div class="game-area">
+      <button class="flower" style="top: 20%; left: 15%;">✦</button>
+      <button class="flower" style="top: 60%; left: 25%;">✦</button>
+      <button class="flower" style="top: 35%; left: 50%;">✦</button>
+      <button class="flower" style="top: 70%; left: 70%;">✦</button>
+      <button class="flower" style="top: 25%; left: 82%;">✦</button>
+    </div>
+
+    <p id="unlock-message"></p>
+  </section>
+
+  <section id="about">
+    <h2>About the Artist</h2>
+    <p>
+      I am a digital illustrator and game designer interested in storytelling,
+      world-building, character design, and interactive media. My work often combines
+      fantasy-inspired visuals, soft color palettes, and game-like environments.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/dog-portrait.jpg" alt="Dog Portrait">
+        <h3>Dog Portrait</h3>
+        <p>2026 — Digital Painting</p>
+      </div>
+
+      <div class="card">
+        <img src="images/mystical-forest.jpg" alt="Mystical Forest">
+        <h3>Mystical Forest</h3>
+        <p>2026 — Digital Painting</p>
+      </div>
+
+      <div class="card">
+        <img src="images/digital-world.jpg" alt="Digital World">
+        <h3>Digital World</h3>
+        <p>2022 — Gouache and Digital Editing</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>2D Character Assets</h3>
+        <p>Pixel art character assets featuring a self-portrait character and dog companion.</p>
+      </div>
+
+      <div class="card">
+        <h3>Russian Village</h3>
+        <p>A vector-based game environment focused on mood, place, and quiet storytelling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Who’s That Pokémon?</h3>
+        <p>An interactive HTML, CSS, and JavaScript guessing game.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pure Data + Unity Sound Project</h3>
+        <p>A game audio system using Pure Data, OSC, and Unity interaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your-email-here@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Tori C Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
