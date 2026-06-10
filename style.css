@@ -334,3 +334,8 @@ font-size: 2.2rem;
 height: 250px;
 }
 }
+
+.locked {
+display: none;
+}
+
