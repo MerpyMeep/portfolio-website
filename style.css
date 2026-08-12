@@ -478,6 +478,16 @@ section h2 {
         0 0 25px rgba(255, 182, 242, 0.1);
 }
 
+.card a {
+    color: #ffb6f2;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #8e63ff;
+    text-decoration: underline;
+}
+
 /* =========================================================
    PORTRAIT ARTWORK
 ========================================================= */
