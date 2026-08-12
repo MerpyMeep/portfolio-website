@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    RESET
 ========================================================= */
@@ -15,6 +14,7 @@ html {
 
 body {
     font-family: Georgia, serif;
+
     background:
         radial-gradient(
             circle at 20% 10%,
@@ -29,11 +29,12 @@ body {
         linear-gradient(
             180deg,
             #070a16 0%,
-            #101735 42%,
+            #101735 40%,
             #1a1533 100%
         );
 
     color: #f7f0ff;
+
     min-height: 100vh;
 }
 
@@ -53,32 +54,37 @@ a {
 
 nav {
     position: fixed;
+
     width: 100%;
+
     top: 0;
     left: 0;
+
     z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 5%;
+    padding: 20px 5%;
 
-    background: rgba(7, 10, 22, 0.78);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(7, 10, 22, 0.85);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(255, 182, 242, 0.12);
 }
 
 nav h1 {
     color: #ffb6f2;
+
     font-size: 2rem;
 
     letter-spacing: 1px;
 
     text-shadow:
-        0 0 18px rgba(255, 182, 242, 0.25);
+        0 0 20px rgba(255, 182, 242, 0.3);
 }
 
 .nav-links {
@@ -87,7 +93,8 @@ nav h1 {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: white;
+
     text-decoration: none;
 
     margin-left: 25px;
@@ -99,6 +106,7 @@ nav h1 {
 
 .nav-links a:hover {
     color: #ffb6f2;
+
     transform: translateY(-2px);
 }
 
@@ -111,8 +119,10 @@ nav h1 {
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     text-align: center;
 
     padding: 120px 20px 80px;
@@ -120,12 +130,14 @@ nav h1 {
     background:
         linear-gradient(
             rgba(7, 10, 22, 0.25),
-            rgba(7, 10, 22, 0.65)
+            rgba(7, 10, 22, 0.6)
         ),
         url("images/background.jpg");
 
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
 }
 
@@ -134,38 +146,36 @@ nav h1 {
 }
 
 .small-title {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+
     text-transform: uppercase;
 
     color: #ffb6f2;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
     font-size: 0.9rem;
 }
 
 .hero h2 {
-    font-size: clamp(2.8rem, 7vw, 4.8rem);
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     color: #fff4ff;
 
     line-height: 1.1;
 
     text-shadow:
-        0 0 20px rgba(255, 182, 242, 0.5),
-        0 0 50px rgba(142, 99, 255, 0.25);
+        0 0 20px rgba(255, 182, 242, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
+
     line-height: 1.8;
 
     color: #e7e0f4;
-
-    max-width: 700px;
-    margin: auto;
 }
 
 
@@ -174,11 +184,12 @@ nav h1 {
 ========================================================= */
 
 button {
-    margin-top: 28px;
+    margin-top: 25px;
 
-    padding: 14px 30px;
+    padding: 14px 28px;
 
     border: none;
+
     border-radius: 999px;
 
     background:
@@ -203,14 +214,10 @@ button {
 }
 
 button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 12px 35px rgba(255, 139, 230, 0.3);
-}
-
-button:active {
-    transform: translateY(-1px);
 }
 
 
@@ -219,15 +226,15 @@ button:active {
 ========================================================= */
 
 section {
-    padding: 100px 7%;
+    padding: 90px 7%;
 }
 
 section h2 {
     text-align: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-size: clamp(2.2rem, 5vw, 3rem);
 
     color: #ffb6f2;
 
@@ -261,14 +268,12 @@ section h2 {
     border: 1px solid rgba(123, 104, 255, 0.45);
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.25),
-        inset 0 1px rgba(255, 255, 255, 0.05);
-
-    backdrop-filter: blur(8px);
+        0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
 .artist-photo {
     width: 180px;
+
     height: 180px;
 
     object-fit: cover;
@@ -284,7 +289,7 @@ section h2 {
 }
 
 .about-box p {
-    line-height: 1.9;
+    line-height: 1.8;
 
     font-size: 1.1rem;
 
@@ -302,20 +307,22 @@ section h2 {
 
 .game-area {
     position: relative;
+
     z-index: 1;
 
     max-width: 900px;
+
     height: 350px;
 
     margin: 30px auto;
 
-    border-radius: 28px;
+    border-radius: 25px;
 
-    border: 1px solid rgba(142, 99, 255, 0.7);
+    border: 2px solid #8e63ff;
 
     background:
         radial-gradient(
-            circle at center,
+            circle,
             #26315f,
             #0d1228
         );
@@ -323,12 +330,12 @@ section h2 {
     overflow: hidden;
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.3),
         inset 0 0 50px rgba(142, 99, 255, 0.08);
 }
 
 .star {
     position: absolute;
+
     z-index: 20;
 
     display: flex;
@@ -343,21 +350,21 @@ section h2 {
     margin: 0;
 
     font-size: 2.8rem;
+
     line-height: 30px;
 
     color: gold;
 
     text-shadow:
-        0 0 20px gold,
-        0 0 40px rgba(255, 215, 0, 0.4);
+        0 0 20px gold;
 
     cursor: pointer;
 
     user-select: none;
 
     transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+        transform 0.2s,
+        opacity 0.2s;
 }
 
 .star:hover {
@@ -366,16 +373,19 @@ section h2 {
 
 .star.collected {
     opacity: 0;
+
     pointer-events: none;
 }
 
 #score {
     color: gold;
+
     font-weight: bold;
 }
 
 #unlock-message {
     color: #ffb6f2;
+
     margin-top: 20px;
 }
 
@@ -391,13 +401,13 @@ section h2 {
 .gallery-section {
     width: 100%;
 
-    padding: 110px 5% 80px;
+    padding: 100px 5% 70px;
 }
 
 .gallery-section h2 {
     text-align: center;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 
@@ -406,85 +416,95 @@ section h2 {
 ========================================================= */
 
 .cards {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
         repeat(
-            auto-fit,
-            minmax(320px, 1fr)
+            2,
+            minmax(0, 1fr)
         );
 
-    gap: 45px;
-
-    width: 100%;
-
-    max-width: 1600px;
-
-    margin: 0 auto;
+    gap: 35px;
 }
 
 
 /* =========================================================
-   ARTWORK CARD
+   EVERY GALLERY CARD
 ========================================================= */
 
-.wide-card {
+.card {
     width: 100%;
 
-    margin: 0 auto;
+    min-width: 0;
 
-    padding: 22px;
+    padding: 18px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(34, 39, 78, 0.78),
-            rgba(18, 17, 43, 0.82)
+            rgba(34, 39, 78, 0.9),
+            rgba(18, 17, 43, 0.9)
         );
 
-    border: 1px solid rgba(123, 104, 255, 0.32);
+    border-radius: 24px;
 
-    border-radius: 26px;
+    border: 1px solid rgba(123, 104, 255, 0.4);
+
+    overflow: hidden;
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.22);
+        0 15px 40px rgba(0, 0, 0, 0.22);
 
     transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        border-color 0.35s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.wide-card:hover {
+.card:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(255, 182, 242, 0.45);
+    border-color:
+        rgba(255, 182, 242, 0.5);
 
     box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.32),
-        0 0 30px rgba(255, 182, 242, 0.08);
+        0 25px 55px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 182, 242, 0.1);
 }
 
 
 /* =========================================================
-   ARTWORK FRAME
+   UNIVERSAL ARTWORK FRAME
 ========================================================= */
 
 /*
-   Every artwork gets the SAME frame.
+   IMPORTANT:
 
-   Portrait, landscape and square images are all
-   completely visible because object-fit is contain.
+   ALL gallery images use this same frame.
+
+   object-fit: contain means:
+
+   - Portrait images are NOT cropped
+   - Landscape images are NOT cropped
+   - Square images are NOT cropped
+   - Images are NOT stretched
+   - The entire artwork remains visible
+
+   The empty space around an image is intentional.
 */
 
-.wide-card img {
+.card img {
     display: block;
 
     width: 100%;
 
-    height: 65vh;
-
-    min-height: 400px;
+    height: 450px;
 
     object-fit: contain;
 
@@ -492,21 +512,10 @@ section h2 {
 
     margin: 0 auto;
 
-    border-radius: 18px;
+    border-radius: 16px;
 
     background:
-        radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.035),
-            rgba(0, 0, 0, 0.12)
-        );
-
-    transition:
-        transform 0.4s ease;
-}
-
-.wide-card:hover img {
-    transform: scale(1.01);
+        rgba(5, 7, 18, 0.5);
 }
 
 
@@ -514,89 +523,53 @@ section h2 {
    ARTWORK TEXT
 ========================================================= */
 
-.wide-card h3 {
-    margin-top: 18px;
-
-    color: #ffcfef;
-
-    font-size: 1.25rem;
-
-    line-height: 1.4;
-}
-
-.wide-card p {
-    margin-top: 7px;
-
-    color: #d8d4ff;
-
-    font-size: 0.95rem;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   NORMAL CARDS
-========================================================= */
-
-.card {
-    background:
-        linear-gradient(
-            180deg,
-            #1a2045,
-            #17142f
-        );
-
-    border-radius: 24px;
-
-    padding: 20px;
-
-    border: 1px solid rgba(111, 116, 201, 0.6);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-
-    height: fit-content;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(255, 182, 242, 0.4);
-
-    box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.25),
-        0 0 25px rgba(255, 182, 242, 0.15);
-}
-
-.card img {
-    width: 100%;
-
-    height: 280px;
-
-    object-fit: cover;
-
-    display: block;
-
-    border-radius: 16px;
-
-    margin-bottom: 18px;
-}
-
 .card h3 {
     color: #ffcfef;
 
-    margin-bottom: 10px;
+    margin-top: 17px;
+
+    margin-bottom: 8px;
 
     font-size: 1.2rem;
+
+    line-height: 1.4;
 }
 
 .card p {
     color: #d8d4ff;
 
-    line-height: 1.7;
+    line-height: 1.6;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   WIDE CARD
+========================================================= */
+
+/*
+   The .wide-card class is no longer allowed to make
+   the image behave differently.
+
+   It simply gets a little more horizontal space.
+*/
+
+.wide-card {
+    grid-column: span 2;
+}
+
+
+/* Wide artwork frame */
+
+.wide-card img {
+    width: 100%;
+
+    height: 550px;
+
+    object-fit: contain;
+
+    object-position: center;
 }
 
 
@@ -618,14 +591,18 @@ section h2 {
             rgba(22, 20, 52, 0.82)
         );
 
-    border-radius: 28px;
+    border-radius: 24px;
 
-    padding: 40px;
+    padding: 35px;
 
     border: 1px solid rgba(123, 104, 255, 0.45);
 
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.contact-box p {
+    line-height: 1.8;
 }
 
 .contact-box span {
@@ -640,36 +617,14 @@ section h2 {
 footer {
     text-align: center;
 
-    padding: 35px 20px;
+    padding: 30px;
 
     background: #070a16;
 
     color: #aaa4bd;
 
-    border-top: 1px solid rgba(255, 182, 242, 0.08);
-}
-
-
-/* =========================================================
-   LARGE TABLETS
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .cards {
-        grid-template-columns:
-            repeat(
-                auto-fit,
-                minmax(300px, 1fr)
-            );
-
-        gap: 30px;
-    }
-
-    .wide-card img {
-        height: 60vh;
-        min-height: 350px;
-    }
+    border-top:
+        1px solid rgba(255, 182, 242, 0.08);
 }
 
 
@@ -679,35 +634,24 @@ footer {
 
 @media (max-width: 900px) {
 
-    nav {
-        padding: 16px 4%;
+    .cards {
+        grid-template-columns: 1fr;
+
+        max-width: 800px;
     }
 
-    nav h1 {
-        font-size: 1.6rem;
+    .wide-card {
+        grid-column: span 1;
     }
 
-    .nav-links a {
-        margin-left: 16px;
-        font-size: 0.95rem;
-    }
-
-    section {
-        padding: 80px 5%;
+    .card img,
+    .wide-card img {
+        height: 500px;
     }
 
     .gallery-section {
-        padding: 90px 4% 60px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        max-width: 900px;
-    }
-
-    .wide-card img {
-        height: 62vh;
-        min-height: 380px;
+        padding:
+            80px 4% 50px;
     }
 }
 
@@ -719,65 +663,49 @@ footer {
 @media (max-width: 768px) {
 
     nav {
-        padding: 14px 5%;
-
-        flex-wrap: wrap;
+        padding: 15px 4%;
     }
 
     nav h1 {
-        font-size: 1.45rem;
-    }
-
-    .nav-links {
-        gap: 12px;
+        font-size: 1.5rem;
     }
 
     .nav-links a {
-        margin-left: 10px;
+        margin-left: 12px;
+
         font-size: 0.85rem;
     }
 
     .hero {
-        padding: 110px 20px 70px;
+        padding:
+            110px 20px 70px;
     }
 
     .hero h2 {
-        font-size: 3rem;
-    }
-
-    .hero p {
-        font-size: 1.05rem;
+        font-size: 2.8rem;
     }
 
     section {
-        padding: 70px 5%;
-    }
-
-    section h2 {
-        margin-bottom: 35px;
+        padding:
+            70px 5%;
     }
 
     .about-box {
         padding: 30px 22px;
-        border-radius: 22px;
-    }
-
-    .artist-photo {
-        width: 150px;
-        height: 150px;
     }
 
     .game-area {
         height: 300px;
-        border-radius: 22px;
     }
 
     .gallery-section {
-        padding: 75px 4% 50px;
+        padding:
+            70px 4% 40px;
     }
 
     .gallery-section h2 {
         font-size: 2.2rem;
+
         margin-bottom: 30px;
     }
 
@@ -785,25 +713,28 @@ footer {
         gap: 25px;
     }
 
-    .wide-card {
-        padding: 14px;
+    .card {
+        padding: 12px;
 
         border-radius: 20px;
     }
 
+    .card img,
     .wide-card img {
-        height: 55vh;
+        height: 65vw;
 
-        min-height: 300px;
+        min-height: 280px;
 
-        border-radius: 14px;
+        max-height: 500px;
+
+        border-radius: 13px;
     }
 
-    .wide-card h3 {
+    .card h3 {
         font-size: 1.1rem;
     }
 
-    .wide-card p {
+    .card p {
         font-size: 0.9rem;
     }
 
@@ -820,7 +751,7 @@ footer {
 @media (max-width: 480px) {
 
     nav {
-        padding: 12px 4%;
+        padding: 12px 3%;
     }
 
     nav h1 {
@@ -829,84 +760,56 @@ footer {
 
     .nav-links a {
         margin-left: 7px;
-        font-size: 0.78rem;
-    }
 
-    .hero {
-        padding: 105px 16px 60px;
+        font-size: 0.75rem;
     }
 
     .hero h2 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
 
     .hero p {
-        font-size: 0.98rem;
-        line-height: 1.7;
-    }
-
-    section {
-        padding: 60px 4%;
+        font-size: 1rem;
     }
 
     .gallery-section {
-        padding: 65px 3% 40px;
+        padding:
+            60px 3% 35px;
     }
 
     .gallery-section h2 {
         font-size: 2rem;
     }
 
-    .cards {
-        gap: 20px;
-    }
-
-    .wide-card {
-        padding: 10px;
+    .card {
+        padding: 9px;
 
         border-radius: 17px;
     }
 
+    .card img,
     .wide-card img {
-        height: 50vh;
+        height: 78vw;
 
-        min-height: 250px;
+        min-height: 240px;
 
-        border-radius: 11px;
+        max-height: 400px;
+
+        border-radius: 10px;
     }
 
-    .wide-card h3 {
-        margin-top: 13px;
+    .card h3 {
         font-size: 1rem;
     }
 
-    .wide-card p {
+    .card p {
         font-size: 0.85rem;
-    }
-
-    .card {
-        padding: 15px;
-        border-radius: 18px;
-    }
-
-    .card img {
-        height: 230px;
-    }
-
-    .game-area {
-        height: 260px;
-    }
-
-    .star {
-        width: 48px;
-        height: 48px;
-        font-size: 2.3rem;
     }
 }
 
 
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -919,7 +822,6 @@ footer {
     *::before,
     *::after {
         transition: none !important;
-        animation: none !important;
     }
 }
-```
+
