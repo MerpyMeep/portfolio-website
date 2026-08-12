@@ -478,26 +478,33 @@ section h2 {
         0 0 25px rgba(255, 182, 242, 0.1);
 }
 
-
 /* =========================================================
-   UNIVERSAL ARTWORK FRAME
+   PORTRAIT ARTWORK
 ========================================================= */
 
-/*
-   IMPORTANT:
+/* Normal landscape/square artwork */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
 
-   ALL gallery images use this same frame.
+/* Smaller portrait artwork */
+.card img.portrait {
+    width: auto;
+    max-width: 75%;
+    max-height: 500px;
 
-   object-fit: contain means:
+    height: auto;
 
-   - Portrait images are NOT cropped
-   - Landscape images are NOT cropped
-   - Square images are NOT cropped
-   - Images are NOT stretched
-   - The entire artwork remains visible
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
 
-   The empty space around an image is intentional.
-*/
+    object-fit: contain;
+}
 
 .card img {
     display: block;
@@ -548,17 +555,9 @@ section h2 {
    WIDE CARD
 ========================================================= */
 
-/*
-   The .wide-card class is no longer allowed to make
-   the image behave differently.
-
-   It simply gets a little more horizontal space.
-*/
-
 .wide-card {
     grid-column: span 2;
 }
-
 
 /* Wide artwork frame */
 
@@ -571,7 +570,6 @@ section h2 {
 
     object-position: center;
 }
-
 
 /* =========================================================
    CONTACT
