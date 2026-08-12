@@ -479,12 +479,16 @@ section h2 {
 }
 
 .card a {
-    color: #ffb6f2;
+    color: #ffb6f2 !important;
     text-decoration: none;
 }
 
+.card a:visited {
+    color: #ffb6f2 !important;
+}
+
 .card a:hover {
-    color: #8e63ff;
+    color: #8e63ff !important;
     text-decoration: underline;
 }
 
