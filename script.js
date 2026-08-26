@@ -19,13 +19,14 @@ function collectStar(star) {
 
   if (collected >= 5) {
     document.getElementById("unlock-message").textContent =
-      "Gallery unlocked!";
+        "Gallery unlocked!";
 
-    document.getElementById("gallery").classList.remove("locked");
-    document.getElementById("misc").classList.remove("locked");
+    document.querySelectorAll(".locked").forEach(function(section) {
+        section.classList.remove("locked");
+    });
 
     document.getElementById("gallery").scrollIntoView({
-      behavior: "smooth"
+        behavior: "smooth"
     });
   }
 }
