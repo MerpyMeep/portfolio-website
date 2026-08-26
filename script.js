@@ -22,6 +22,7 @@ function collectStar(star) {
       "Gallery unlocked!";
 
     document.getElementById("gallery").classList.remove("locked");
+    document.getElementById("misc").classList.remove("locked");
 
     document.getElementById("gallery").scrollIntoView({
       behavior: "smooth"
